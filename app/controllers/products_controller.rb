@@ -9,9 +9,12 @@ class ProductsController < ApplicationController
 
    def create
      @product = Product.new(params.require(:product).permit(:name, :price))
-
-     @product.save
+     if @product.save
      redirect_to @product
+   else
+  render 'new'
+  end
+
    end
 
 
