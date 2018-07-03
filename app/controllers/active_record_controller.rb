@@ -1,4 +1,5 @@
+# frozen_string_literal: true
+
 class ActiveRecordController < ApplicationController
-  def migration
-  end
+  def migration; end
 end
