@@ -13,12 +13,10 @@ class ProductsController < ApplicationController
       redirect_to @product
     else
       render 'new'
- end
+    end
   end
 
-  if 
 
-  end
 
   def show
     #test
