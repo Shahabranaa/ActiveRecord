@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ProductsController < ApplicationController
   def new; end
 
@@ -16,10 +14,7 @@ class ProductsController < ApplicationController
     end
   end
 
-
-
   def show
-    #test
     @product = Product.find(params[:id])
   end
- end
+end
