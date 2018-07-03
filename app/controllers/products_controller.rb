@@ -11,9 +11,6 @@ class ProductsController < ApplicationController
   def create
     @product = Product.create(product_params)
     @product.save
-    after_create do |product|
-        puts "You have initialized an object!"
-      end
 
     redirect_to @product
   end
