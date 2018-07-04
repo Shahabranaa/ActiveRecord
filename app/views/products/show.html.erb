@@ -7,4 +7,37 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
+<h2> Rating</h2>
+
+<% @product.reviews.each do |r| %>
+<p>
+  <strong>Review:</strong>
+  <%= r.product_review %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= r.product_rating %>
+</p>
+<% end %>
+
+
+<h2>Add a review:</h2>
+<%= form_with(model: [ @product, @product.reviews.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :product_review %><br>
+    <%= form.text_area :product_review %>
+  </p>
+  <p>
+    <%= form.label :product_rating %><br>
+    <%= form.number_field :product_rating %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+
+
+<% end %>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
