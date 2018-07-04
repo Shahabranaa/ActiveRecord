@@ -8,5 +8,4 @@ class ReviewsController < ApplicationController
       def review_params
         params.require(:review).permit(:product_review, :product_rating)
       end
-  
   end

@@ -27,5 +27,4 @@ ActiveRecord::Schema.define(version: 2018_07_03_170519) do
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_reviews_on_product_id"
   end
-
 end
